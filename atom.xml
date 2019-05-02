@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://HarryHeYi.github.io/"/>
-  <updated>2019-05-01T14:23:42.243Z</updated>
+  <updated>2019-05-02T11:05:32.359Z</updated>
   <id>http://HarryHeYi.github.io/</id>
   
   <author>
@@ -17,21 +17,18 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello Hexo!</title>
-    <link href="http://HarryHeYi.github.io/2019/05/01/Hello-Hexo/"/>
-    <id>http://HarryHeYi.github.io/2019/05/01/Hello-Hexo/</id>
-    <published>2019-05-01T14:22:01.000Z</published>
-    <updated>2019-05-01T14:23:42.243Z</updated>
+    <title>Hexo+Github Pages搭建个人博客</title>
+    <link href="http://HarryHeYi.github.io/2019/05/02/hexo/"/>
+    <id>http://HarryHeYi.github.io/2019/05/02/hexo/</id>
+    <published>2019-05-02T09:14:44.670Z</published>
+    <updated>2019-05-02T11:05:32.359Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Hexo�j�һ��"><a href="#Hexo�j�һ��" class="headerlink" title="Hexo�ĵ�һ��"></a>Hexo�ĵ�һ��</h2><hr>]]></content>
+    <content type="html"><![CDATA[<h1 id="hexo框架的搭建"><a href="#hexo框架的搭建" class="headerlink" title="hexo框架的搭建"></a>hexo框架的搭建</h1><h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><p>下载地址：<a href="https://gitforwindows.org/" target="_blank" rel="noopener">https://gitforwindows.org/</a><br>点击download下载<br>安装一直next，不用修改</p><h2 id="node-js"><a href="#node-js" class="headerlink" title="node.js"></a>node.js</h2><p>下载地址：<a href="https://nodejs.org/zh-cn/download/" target="_blank" rel="noopener">https://nodejs.org/zh-cn/download/</a><br>选择64-bit下载<br>安装也是一直next，不用修改路径<br>运行cmd命令node -v查看node.js的版本<br><a id="more"></a></p><h2 id="hexo安装"><a href="#hexo安装" class="headerlink" title="hexo安装"></a>hexo安装</h2><p>电脑中选一个盘符，创建一个blog文件夹（名字随意，最好不要中文）作为博客网站的根目录<br>进入blog文件夹，空白处右键点击Git Bash here<br>输入<br>npm -v（查看npm的版本信息）<br>npm install -g cnpm –registry=<a href="http://registry.npm.taobao.org" target="_blank" rel="noopener">http://registry.npm.taobao.org</a> （国内镜像很慢，使用淘宝镜像速度会快很多）<br>cnpm install -g hexo-cli（安装hexo框架）<br>hexo init（初始化博客）<br>cnpm install<br>运行结束后，进入blog文件夹，可以看到文件夹里添加了许多文件<br>此时本地搭建完成，输入hexo s启动查看，提示里有<a href="http://locakhost:4000" target="_blank" rel="noopener">http://locakhost:4000</a> ，在浏览器打开查看</p><h1 id="本地博客部署到github上"><a href="#本地博客部署到github上" class="headerlink" title="本地博客部署到github上"></a>本地博客部署到github上</h1><h2 id="创建Github-Pages仓库"><a href="#创建Github-Pages仓库" class="headerlink" title="创建Github Pages仓库"></a>创建Github Pages仓库</h2><p>1.在 <a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a> 里注册一个账号<br>直接填写Username，Email，Password三项，Sign up for free<br>选择free方案<br>完成Github注册后，会收到一封确认邮件，完成验证后创建仓库<br>create a new repository<br>填写Repository name，此处必须是username.github.io（前面的owner里即是你注册的用户名）<br>勾选public，Create<br>2.blog目录里空白处右键进入Git Bash here<br>cnpm install hexo-deployer-git –save 安装发布插件<br>ssh-keygen -t rsa -C “邮箱地址”  //此处填写你注册的邮箱地址<br>在C盘找到.ssh文件夹找到id_rsa.pub,用文本方式打开<br>复制到（右上角点击图像再点击Setting选中SSH and GPG keys然后new SSH key）Key<br>回到命令行，输入ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>，检测是否连接成功<br>出现Hi+你的用户名+…,这说明连接成功<br>3.在blog文件夹里找到_config.yml文件，打开<br>修改title（博客名），author（你的名字），url（<a href="https://username.github.io）" target="_blank" rel="noopener">https://username.github.io）</a><br>在文件底部，deploy下面添加一个repo项 一个branch项<br>type: git<br>repo: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:username/username.github.io.git<br>branch: master<br>此处需要注意，修改内容这里边的空格不能省略（xx: xx）<br>4.部署<br>命令行输入hexo g &amp;&amp; hexo d</p><p>最后就可以通过 <a href="https://username.github.io" target="_blank" rel="noopener">https://username.github.io</a> 访问你自己的博客啦</p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h2 id=&quot;Hexo�j�һ��&quot;&gt;&lt;a href=&quot;#Hexo�j�һ��&quot; class=&quot;headerlink&quot; title=&quot;Hexo�ĵ�һ��&quot;&gt;&lt;/a&gt;Hexo�ĵ�һ��&lt;/h2&gt;&lt;hr&gt;
-
-      
+      &lt;h1 id=&quot;hexo框架的搭建&quot;&gt;&lt;a href=&quot;#hexo框架的搭建&quot; class=&quot;headerlink&quot; title=&quot;hexo框架的搭建&quot;&gt;&lt;/a&gt;hexo框架的搭建&lt;/h1&gt;&lt;h2 id=&quot;安装git&quot;&gt;&lt;a href=&quot;#安装git&quot; class=&quot;headerlink&quot; title=&quot;安装git&quot;&gt;&lt;/a&gt;安装git&lt;/h2&gt;&lt;p&gt;下载地址：&lt;a href=&quot;https://gitforwindows.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://gitforwindows.org/&lt;/a&gt;&lt;br&gt;点击download下载&lt;br&gt;安装一直next，不用修改&lt;/p&gt;
+&lt;h2 id=&quot;node-js&quot;&gt;&lt;a href=&quot;#node-js&quot; class=&quot;headerlink&quot; title=&quot;node.js&quot;&gt;&lt;/a&gt;node.js&lt;/h2&gt;&lt;p&gt;下载地址：&lt;a href=&quot;https://nodejs.org/zh-cn/download/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://nodejs.org/zh-cn/download/&lt;/a&gt;&lt;br&gt;选择64-bit下载&lt;br&gt;安装也是一直next，不用修改路径&lt;br&gt;运行cmd命令node -v查看node.js的版本&lt;br&gt;
     
     </summary>
     

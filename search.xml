@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Hello Hexo!]]></title>
-    <url>%2F2019%2F05%2F01%2FHello-Hexo%2F</url>
-    <content type="text"><![CDATA[Hexo�ĵ�һ��]]></content>
+    <title><![CDATA[Hexo+Github Pages搭建个人博客]]></title>
+    <url>%2F2019%2F05%2F02%2Fhexo%2F</url>
+    <content type="text"><![CDATA[hexo框架的搭建安装git下载地址：https://gitforwindows.org/点击download下载安装一直next，不用修改 node.js下载地址：https://nodejs.org/zh-cn/download/选择64-bit下载安装也是一直next，不用修改路径运行cmd命令node -v查看node.js的版本 hexo安装电脑中选一个盘符，创建一个blog文件夹（名字随意，最好不要中文）作为博客网站的根目录进入blog文件夹，空白处右键点击Git Bash here输入npm -v（查看npm的版本信息）npm install -g cnpm –registry=http://registry.npm.taobao.org （国内镜像很慢，使用淘宝镜像速度会快很多）cnpm install -g hexo-cli（安装hexo框架）hexo init（初始化博客）cnpm install运行结束后，进入blog文件夹，可以看到文件夹里添加了许多文件此时本地搭建完成，输入hexo s启动查看，提示里有http://locakhost:4000 ，在浏览器打开查看 本地博客部署到github上创建Github Pages仓库1.在 https://github.com/ 里注册一个账号直接填写Username，Email，Password三项，Sign up for free选择free方案完成Github注册后，会收到一封确认邮件，完成验证后创建仓库create a new repository填写Repository name，此处必须是username.github.io（前面的owner里即是你注册的用户名）勾选public，Create2.blog目录里空白处右键进入Git Bash herecnpm install hexo-deployer-git –save 安装发布插件ssh-keygen -t rsa -C “邮箱地址” //此处填写你注册的邮箱地址在C盘找到.ssh文件夹找到id_rsa.pub,用文本方式打开复制到（右上角点击图像再点击Setting选中SSH and GPG keys然后new SSH key）Key回到命令行，输入ssh -T git@github.com，检测是否连接成功出现Hi+你的用户名+…,这说明连接成功3.在blog文件夹里找到_config.yml文件，打开修改title（博客名），author（你的名字），url（https://username.github.io）在文件底部，deploy下面添加一个repo项 一个branch项type: gitrepo: git@github.com:username/username.github.io.gitbranch: master此处需要注意，修改内容这里边的空格不能省略（xx: xx）4.部署命令行输入hexo g &amp;&amp; hexo d 最后就可以通过 https://username.github.io 访问你自己的博客啦]]></content>
   </entry>
   <entry>
     <title><![CDATA[Hello World]]></title>
